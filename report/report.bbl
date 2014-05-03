@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{essentia}
+D.~Bogdanov, Nicolas Wack, Emilia G{\'o}mez, Sankalp Gulati, P.~Herrera,
+  O.~Mayor, G.~Roma, J.~Salamon, J.~Zapata, and Xavier Serra.
+\newblock Essentia: an audio analysis library for music information retrieval.
+\newblock In {\em International Society for Music Information Retrieval
+  Conference (ISMIR{\textquoteright}13)}, pages 493--498, Curitiba, Brazil,
+  04/11/2013 2013.
+
+\bibitem{kapur2004query}
+Ajay Kapur, Manj Benning, and George Tzanetakis.
+\newblock Query-by-beat-boxing: Music retrieval for the dj.
+\newblock In {\em Proceedings of the International Conference on Music
+  Information Retrieval}, pages 170--177, 2004.
+
+\bibitem{lidy2010suitability}
+Thomas Lidy, Carlos~N Silla~Jr, Olmo Cornelis, Fabien Gouyon, Andreas Rauber,
+  Celso~AA Kaestner, and Alessandro~L Koerich.
+\newblock On the suitability of state-of-the-art music information retrieval
+  methods for analyzing, categorizing and accessing non-western and ethnic
+  music collections.
+\newblock {\em Signal Processing}, 90(4):1032--1048, 2010.
+
+\bibitem{ono2008real}
+Nobutaka Ono, Kenichi Miyamoto, Hirokazu Kameoka, and Shigeki Sagayama.
+\newblock A real-time equalizer of harmonic and percussive components in music
+  signals.
+\newblock In {\em ISMIR}, pages 139--144, 2008.
+
+\bibitem{Peeters2004}
+Geoffroy Peeters.
+\newblock {A large set of audio features for sound description (similarity and
+  classification) in the CUIDADO project}.
+\newblock Technical report, {Icram}, 2004.
+
+\bibitem{tindale2004retrieval}
+Adam~R Tindale, Ajay Kapur, George Tzanetakis, and Ichiro Fujinaga.
+\newblock Retrieval of percussion gestures using timbre classification
+  techniques.
+\newblock In {\em ISMIR}, 2004.
+
+\end{thebibliography}
