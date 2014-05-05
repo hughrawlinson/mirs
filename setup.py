@@ -10,7 +10,7 @@ config = {
     'download_url': 'http://www.github.com/hughrawlinson/mirs',
     'author_email': 'hugh@codeoclock.net',
     'version': '0.1',
-    'install_requires': ['unittest'],
+    'install_requires': [],
     'packages': ['mirs'],
     'scripts': [],
     'name': 'MIRS'

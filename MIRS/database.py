@@ -2,15 +2,15 @@
 
 from os import listdir
 from os.path import abspath, isfile
-from csv import *
+import csv
 import analysis
 
 class Database:
     db = dict()
     directory = ""
 
-    def analyzeDirectory():
-        files = [ f for f in listdir(directory) if isfile(join(self.directory,f)) ]
+    def analyzeDirectory(self):
+        files = [ f for f in listdir(self.directory) if isfile(join(self.directory,f)) ]
         durBounds = [sys.float_info.max,0]
         scBounds = [sys.float_info.max,0]
         for f in files:
@@ -26,15 +26,15 @@ class Database:
                 scBounds[1] = self.db[f][1]
         self.db['meta'] = durBounds + scBounds
 
-    def save():
+    def save(self):
         with open(directory+'/.mirs.csv', 'wb') as mirsfile:
             writer = csv.writer(mirsfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
             # writer.writerow(['filename','duration','spectralCentroid','spectralFlatness','normalizedRMS'])
             for f in self.db.keys():
                 writer.writerow([f]+self.db[f])
 
-    def readFromDisk():
-        with open(directory+'/.mirs.csv','rb') as mirsfile:
+    def readFromDisk(self):
+        with open(self.directory+'/.mirs.csv','rb') as mirsfile:
             reader = csv.reader(mirsfile)
             try:
                 for row in reader:
@@ -44,16 +44,17 @@ class Database:
             except:
                 raise IOError
 
-    def getDbDict():
+    def getDbDict(self):
         return self.db
 
     def __init__(self, directory = ".", flush=False):
-        self.directory = abspath(directory).replace(' ','\ ')+'/'
+        self.directory = abspath(directory)+'/'
 
         try:
             self.readFromDisk()
         except IOError:
             self.analyzeDirectory()
             self.save()
-        except:
+        except Exception as e:
+            print e
             print "Unexpected error"

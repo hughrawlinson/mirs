@@ -1,10 +1,12 @@
 #!/usr/bin/python
 
+import operator
+from math import sqrt
+
 class Ranking:
     rankData = list()
 
-
-    def ranking(featureset,db):
+    def ranking(self, featureset, db):
         ranking = list()
         for f in db.keys():
             #euclidean distance between normalized flatness and rms
@@ -15,7 +17,7 @@ class Ranking:
         ranking.sort(key=operator.itemgetter(1))
         self.rankData = ranking
 
-    def getRankingList:
+    def getRankingList(self):
         return self.rankData
 
     def __init__(self,featureset,db):

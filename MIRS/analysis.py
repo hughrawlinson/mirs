@@ -5,13 +5,13 @@ import commands
 class Analysis:
     features = []
 
-    def fileToFeatureSet(absfilepath):
-        rout = commands.getoutput('./analysis.r '+absfilepath).split(' ')
+    def fileToFeatureSet(self, absfilepath):
+        rout = commands.getoutput('./MIRS/analysis.r '+absfilepath).split(' ')
         rout = filter(None,rout)
         if rout[0]!='Error':
-            return map(float,rout)
+            self.features = map(float,rout)
 
-    def getFeatureList():
+    def getFeatureList(self):
         return self.features
 
     def __init__(self, filepath):
