@@ -1,11 +1,18 @@
 #!/usr/bin/python
 
-__all__ = ["database", "ranking", "analysis", "rank"]
+"""
+This module facilitates similarity based lookup on audio files, and is particularly aimed at short, percussive musical samples like drum hits.
+"""
+
+__all__ = ["database", "ranking", "analysis"]
 from database import Database
 from ranking import Ranking
 from analysis import Analysis
 
 def rank(infile,directory):
+    """
+    Creates a similarity ranking between infile and each of the audio files contained in directory.
+    """
     analysis = Analysis(infile)
     db = Database(directory)
     # print analysis.getFeatureList()

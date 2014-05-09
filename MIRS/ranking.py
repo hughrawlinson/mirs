@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+"""
+A facility for creating rankings between an individual MIRS feature set and a MIRS featureset database
+"""
+
 import operator
 from math import sqrt
 

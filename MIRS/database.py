@@ -1,5 +1,11 @@
 #!/usr/bin/python
 
+"""
+A class for creating a database of feature sets based on a directory of audio files in the filesystem
+"""
+
+
+
 from os import listdir
 from os.path import abspath, isfile
 import csv
